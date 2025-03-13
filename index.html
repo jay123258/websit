@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <p>Freelance Web Developer & Linux Administrator</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I specialize in web development using HTML, CSS, and JavaScript. As a Linux administrator, I manage user permissions, firewall configurations, networking, and server management.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Website Development</li>
+            <li>Linux Server Setup & Administration</li>
+            <li>System Monitoring & Backup</li>
+            <li>managing user group and permissions</li>
+            <li>configurations firewall</li>
+            <li>backup and recovery</li>
+
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Connect with Me</h2>
+        <p>Follow or reach out through my social media:</p>
+        <ul>
+            <div id="social-buttons">
+                <a href="https://www.instagram.com/jay_vaghela_23" 
+                   style="display:inline-block; padding:10px 20px; margin:5px; background-color:#E1306C; color:#fff; text-decoration:none; border-radius:4px;">
+                  Instagram
+                </a>
+                <a href="https://www.linkedin.com/in/jay-vaghela-0707662b6/" 
+                   style="display:inline-block; padding:10px 20px; margin:5px; background-color:#0077B5; color:#fff; text-decoration:none; border-radius:4px;">
+                  LinkedIn
+                </a>
+                <a href="https://github.com/jay123258" 
+                   style="display:inline-block; padding:10px 20px; margin:5px; background-color:#333; color:#fff; text-decoration:none; border-radius:4px;">
+                  GitHub
+                </a>
+               
+              </div>
+
+          
+              
+        </ul>
+
+        <button onclick="window.location.href='mailto:av3159729@gmail.com'" 
+        style="padding: 10px 20px; background-color: #D44638; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+  av3159729@gmail.com
+</button>
+
+
+
+     
+
+</button>
+
+</a>
+
+    </section>
+
+   
+</a>
+
+    </h3>    
+    <footer>
+        Thank your visite my Website
+    </footer>
+ <style>
+    body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #333, #555);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+h1, h2 {
+    color: #222;
+    text-align: center;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+#about:hover {
+    transform: scale(1.05);
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li {
+    background: #007BFF;
+    color: white;
+    margin: 10px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+ul li:hover {
+    background: #0056b3;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+ </style>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Add scroll effect to header
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(51, 51, 51, 0.9)';
+            header.style.transition = 'background 0.3s';
+        } else {
+            header.style.background = 'linear-gradient(135deg, #333, #555)';
+        }
+    });
+
+    // Hover effect on service list items
+    document.querySelectorAll('#services ul li').forEach(item => {
+        item.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.1)';
+            this.style.transition = 'transform 0.3s';
+        });
+        item.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+}
+
+<button id="copyEmailButton" style="padding: 10px 20px; background-color: #D44638; color: #fff; border: none; border-radius: 4px; cursor: pointer;">
+  av3159729@gmail.com
+</button>
+
+<script>
+  document.getElementById('copyEmailButton').addEventListener('click', function() {
+    // Create a temporary input element
+    var tempInput = document.createElement('input');
+    tempInput.style.position = 'absolute';
+    tempInput.style.left = '-9999px';
+    tempInput.value = 'av3159729@gmail.com';
+    document.body.appendChild(tempInput);
+    
+    // Select and copy the text
+    tempInput.select();
+    document.execCommand('copy');
+    
+    // Remove the temporary input element
+    document.body.removeChild(tempInput);
+    
+    // Inform the user that the email has been copied
+    alert('Email address copied to clipboard!');
+  });
+</script>
+
+ </script>
+</body>
+</html>
